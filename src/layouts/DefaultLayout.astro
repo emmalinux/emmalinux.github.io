@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo.svg";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>EmmaLinux</title>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    </head>
+    <body class="bg-gradient-to-r from-slate-100 to-zinc-300">
+        <div class="mx-auto my-10 max-w-7xl rounded-lg bg-white"><!--border-2 border-zinc-700 -->
+            <header class="rounded-t-lg px-3 py-20 bg-gradient-to-r from-cyan-500 to-blue-500 text-yellow-50">
+                <h1 class="mb-3 text-7xl font-semibold tracking-wide">
+                    EmmaLinux
+                </h1>
+                <h2 class="mb-3 text-xl font-thin tracking-wider">
+                    Open-source enterprise operating system designed
+                    to be 100% bug-for-bug compatible with Red Hat Enterprise Linux®.
+                </h2>
+            </header>
+            <nav class="flex flex-col md:flex-row items-center">
+                <span class="flex-1 mx-5 my-2">
+                    <Image
+                        src={logo}
+                        alt="EmmaLinux logo"
+                        width={50}
+                        height={50}
+                    />
+                </span>
+                <a href="" class="mx-3 border-2 rounded-lg border-green-400 px-3 py-2 bg-green-400 text-white font-semibold text-lg">
+                    Home
+                </a>
+                <a href="" class="mx-3 border-2 rounded-lg border-green-400 px-3 py-2 bg-green-400 text-white font-semibold text-lg">
+                    Download
+                </a>
+                <a href="" class="mx-3 border-2 rounded-lg border-green-400 px-3 py-2 bg-green-400 text-white font-semibold text-lg">
+                    About
+                </a>
+            </nav>
+            <main class="mx-5 my-10">
+                <slot />
+            </main>
+            <footer class="rounded-b-lg px-3 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-yellow-50">
+                <p class="text-center">(c) 2024 EmmaLinux.</p> 
+            </footer>
+        </div>
+    </body>
+</html>
