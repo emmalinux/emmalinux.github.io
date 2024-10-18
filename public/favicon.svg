@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="203.58215mm"
+   height="203.58215mm"
+   viewBox="0 0 203.58215 203.58215"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-3.372635,-43.613036)">
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#103778;stroke-width:2.5;stroke-dasharray:none;stroke-opacity:1"
+       id="path1"
+       cx="105.16371"
+       cy="145.40411"
+       r="100.54108" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;stroke:#103778;stroke-width:1;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-7"
+       cx="105.77032"
+       cy="146.48811"
+       r="85.371758" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:252.899px;line-height:0;font-family:Gabriola;-inkscape-font-specification:Gabriola;fill:#103778;fill-opacity:0.980392;stroke:#103778;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+       x="45.782734"
+       y="229.49149"
+       id="text3"
+       transform="scale(1.0718316,0.93298238)"><tspan
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:252.899px;line-height:0;font-family:Gabriola;-inkscape-font-specification:Gabriola;fill:#103778;fill-opacity:0.980392;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke markers fill"
+         x="45.782734"
+         y="229.49149">E</tspan></text>
+  </g>
+</svg>

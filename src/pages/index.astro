@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+
+import logo from "../assets/logo.svg";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>EmmaLinux</title>
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    </head>
+    <body class="bg-gradient-to-r from-slate-100 to-zinc-300">
+        <div class="mx-auto my-8 max-w-[98%]">
+            <div class="flex h-screen justify-center items-center">
+                <div>
+                    <Image
+                        src={logo}
+                        alt="EmmaLinux logo"
+                        width={250}
+                        height={250}
+                        class="block mx-auto"
+                    />
+                    <div
+                        class="mx-auto mt-10 max-w-xl flex flex-row justify-center"
+                    >
+                        <a
+                            href="#kde"
+                            class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50"
+                        >
+                            KDE version
+                        </a>
+                        <a
+                            href="#gnome"
+                            class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50"
+                        >
+                            GNOME version
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
