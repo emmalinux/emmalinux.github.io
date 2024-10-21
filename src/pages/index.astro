@@ -1,9 +1,12 @@
 ---
-import DefaultLayout from "../layouts/DefaultLayout.astro"
+import { Image } from "astro:assets";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+import homescreen from '../assets/desktop.jpg';
 ---
 
-
 <DefaultLayout>
+    <Image src={homescreen} alt="EmmaLinux is home screen" />
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
