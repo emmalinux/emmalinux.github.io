@@ -3,77 +3,43 @@ import { Image } from "astro:assets";
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 import homescreen from '../assets/desktop.jpg';
+import Box from "../components/Box.astro";
 ---
 
 <DefaultLayout>
-    <Image src={homescreen} alt="EmmaLinux is home screen" />
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        It has survived not only five centuries, but also the leap into electronic typesetting, 
-        remaining essentially unchanged. It was popularised in the 1960s with the release of 
-        Letraset sheets containing Lorem Ipsum passages, 
-        and more recently with desktop publishing software 
-        like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-
-    <div class="mx-auto mt-10 max-w-xl flex flex-row justify-center">
-        <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
-            KDE version
-        </a>
-        <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
-            GNOME version
-        </a>
-    </div>
+    <section class="flex flex-row items-center justify-center gap-3">
+        <header class="grow">
+            <h1 class="mb-5 text-5xl font-bold">Free Linux OS for the community, by the community</h1>
+            <h2 class="mb-3 text-lg font-medium">An Open Source, community owned and governed, forever-free enterprise Linux distribution, focused on long-term stability, providing a robust production-grade platform. AlmaLinux OS is binary compatible with RHEL®.</h2>
+        </header>
+        <div class="flex-none">
+            <Image src={homescreen} width={650} height={350}  alt="EmmaLinux is home screen" />
+        </div>
+    </section>
+   
+    <section class="my-10 grid grid-cols-4 gap-3">
+        <Box title="GitHub" icon="github">
+            Our GitHub organization contains source code and tools used to build AlmaLinux OS and related infrastructure.
+        </Box>
+        <!--<Box title="Twitter" icon="twitter">
+            Follow our vibrant Twitter community page, interact with other AlmaLinux OS users, receive updates, find and provide help.
+        </Box>-->
+        <Box title="Reddit" icon="reddit">
+            Join our vibrant Reddit community, interact with other AlmaLinux OS users, receive updates, find and provide help.
+        </Box>
+        <Box title="Discord" icon="discord">
+            Join our vibrant Reddit community, interact with other AlmaLinux OS users, receive updates, find and provide help.
+        </Box>
+    </section>
+    <section class="my-10 text-center">
+        <h3 class="text-5xl font-bold">Dowload EmmaLinux</h3>
+        <div class="mx-auto mt-10 max-w-xl flex flex-row justify-center">
+            <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
+                KDE version
+            </a>
+            <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
+                GNOME version
+            </a>
+        </div>
+    </section>   
 </DefaultLayout>

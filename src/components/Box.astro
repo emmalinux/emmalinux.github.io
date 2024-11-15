@@ -1,0 +1,15 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { title, icon } = Astro.props;
+---
+
+<div class="px-5 py-3 border-2 border-cyan-500 rounded-md">
+    <header class="mb-3 flex flex-row gap-2 items-stretch justify-center text-xl font-medium">
+        <Icon name={icon} class="flex-none" width={25} height={25} />
+        <h3 class="grow">{title}</h3>
+    </header>
+    <div class="text-left text-lg font-normal">
+        <slot />
+    </div>
+</div>
