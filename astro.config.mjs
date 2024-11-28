@@ -1,12 +1,14 @@
 import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
-
 import icon from 'astro-icon';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
     site: 'https://emmalinux.github.io',
     compressHTML: true,
-    integrations: [tailwind(), icon()]
+    integrations: [
+        tailwind(), 
+        icon(),
+    ]
 });

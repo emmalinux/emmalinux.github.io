@@ -4,6 +4,7 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 import homescreen from '../assets/desktop.jpg';
 import Box from "../components/Box.astro";
+import Button from "../components/Button.astro";
 ---
 
 <DefaultLayout>
@@ -17,7 +18,7 @@ import Box from "../components/Box.astro";
         </div>
     </section>
    
-    <section class="my-10 grid grid-cols-4 gap-3">
+    <section class="my-10 grid grid-cols-3 gap-3">
         <Box title="GitHub" icon="github">
             Our GitHub organization contains source code and tools used to build AlmaLinux OS and related infrastructure.
         </Box>
@@ -34,12 +35,16 @@ import Box from "../components/Box.astro";
     <section class="my-10 text-center">
         <h3 class="text-5xl font-bold">Dowload EmmaLinux</h3>
         <div class="mx-auto mt-10 max-w-xl flex flex-row justify-center">
-            <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
-                KDE version
-            </a>
-            <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
-                GNOME version
-            </a>
+            <!--
+                <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
+                    KDE version
+                </a>
+                <a href="" class="m-2 p-2 border-2 border-red-300 rounded-md font-medium bg-red-300 text-slate-50">
+                    GNOME version
+                </a>
+            -->
+            <Button href="/kde" name="KDE desktop environment" icon="kde" />
+            <!--<Button href="/gnome"  name="GNOME" icon="gnome" /> -->
         </div>
     </section>   
 </DefaultLayout>

@@ -1,0 +1,10 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { href, name, icon } = Astro.props;
+---
+
+<a href={href} class="px-5 py-3 border-2 border-cyan-500 rounded-md">
+    <Icon name={icon} size={64} class="mb-3 block mx-auto max-w-full" />
+    <span class="font-light text-base">{name}</span>
+</a>
