@@ -6,9 +6,8 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
     site: 'https://emmalinux.github.io',
-    compressHTML: true,
     integrations: [
-        tailwind(), 
         icon(),
+        tailwind(),
     ]
 });

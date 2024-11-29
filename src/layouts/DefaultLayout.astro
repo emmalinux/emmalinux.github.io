@@ -1,8 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import logo from "../assets/logo.svg";
-import Logo from "../components/Logo.astro";
+import logoImg from "../assets/logo.png";
 ---
 
 <html lang="en">
@@ -19,14 +18,13 @@ import Logo from "../components/Logo.astro";
         <div class="mx-auto my-10 w-[95%] max-w-7xl rounded-lg bg-white">
             <header class="rounded-t-lg px-3 py-10 bg-gradient-to-r from-cyan-500 to-blue-500 text-yellow-50">
                 <div class="flex flex-col md:flex-row items-center gap-8">
-                   <!-- <Image
-                        src={logo}
+                    <Image
+                        src={logoImg}
                         width={250}
                         height={250}
                         alt="EmmaLinux logo"
                         class="w-40 h-40 md:w-52 md:h-52"
-                    /> -->
-                    <Logo />
+                    />
                     <div class="flex-1">
                         <h1 class="mb-3 text-7xl font-semibold tracking-wide">
                             EmmaLinux

@@ -1,0 +1,16 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+
+const { id } = Astro.params;
+
+export function getStaticPaths() {
+    return [
+        { params: { id: 'kde' }},
+        { params: { id: 'gnome'}}
+    ];
+}
+---
+
+<DefaultLayout>
+    <h1>{id}</h1>
+</DefaultLayout>
