@@ -1,0 +1,10 @@
+---
+import { Icon } from 'astro-icon/components';
+
+const { href, name, icon } = Astro.props;
+---
+
+<a href={href} class="text-cyan-500 hover:text-cyan-500 hover:underline">
+    { icon && <Icon name={icon} size={64} class="mb-3 block mx-auto max-w-full" />}
+    <span class="text-base">{name}</span>
+</a>
