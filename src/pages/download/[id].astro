@@ -1,9 +1,8 @@
 ---
-import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import type { ImageMetadata } from 'astro';
 
-const { id } = Astro.params;
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
 
 export function getStaticPaths() {
     return [
@@ -12,16 +11,18 @@ export function getStaticPaths() {
     ];
 }
 
-import homeScreenImg from '../../assets/desktop.jpg';
+const { id } = Astro.params;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(`../../assets/screens/*.{jpeg,jpg,png,gif}`);
 
 const distro = {
     title: `EmmaLinux ${id.toUpperCase()} desktop enviroment`,
-    homeScreen: homeScreenImg,
+    homeScreen: images[`desktop-${id}.jpg`],
     isoImages: [
-        { name: `EmmaLinux 9.0 ${id} desktop`, iso: `EmmaLinux-${id}-9.0.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
-        { name: `EmmaLinux 9.0 ${id} desktop`, iso: `EmmaLinux-${id}-9.0.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
-        { name: 'EmmaLinux-${id}-9.0', iso: `EmmaLinux-${id}-9.0.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
-        { name: 'EmmaLinux-${id}-9.0', iso: `EmmaLinux-${id}-9.0.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'}
+        { name: `EmmaLinux 9.4 ${id} desktop`, iso: `EmmaLinux-${id}-9.4.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
+        { name: `EmmaLinux 9.5 ${id} desktop`, iso: `EmmaLinux-${id}-9.5.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
+        { name: `EmmaLinux 9.6 ${id} desktop`, iso: `EmmaLinux-${id}-9.6.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'},
+        { name: `EmmaLinux 10 ${id} desktop`, iso: `EmmaLinux-${id}-10.iso`, sha: '3947accd140a2a1833b1ef2c811f8c0d48cd27624cad343992f86cfabd2474c9'}
     ] 
 }
 ---
@@ -30,8 +31,9 @@ const distro = {
     <section class="text-center">
         <h1 class="mb-3 text-6xl font-bold">Get EmmaLinux</h1>
         <h2  class="mb-3 text-2xl font-semibold">{distro.title}</h2>
-        <Image src={distro.homeScreen} alt=`EmmaLinux ${id} desktop` width={900} height={450} class="my-5 block mx-auto rounded-md" />
+        <Image src={distro.homeScreen()} alt=`EmmaLinux ${id} desktop` width={900} height={450} class="my-5 block mx-auto rounded-md" />
     </section>
+
     <section class="mt-10 text-center">
         <h3 class="mb-5 text-2xl">ISO Images</h3>
         <ul class="flex flex-row gap-3 flex-wrap">

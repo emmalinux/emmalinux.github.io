@@ -1,5 +1,7 @@
 ---
 import Logo from "../components/Logo.astro";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
@@ -10,6 +12,7 @@ import Logo from "../components/Logo.astro";
 
         <title>EmmaLinux - Universal and Open-source Linux enterprise operating system.</title>
 
+        <link rel="canonical" href={canonicalURL} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
     <body class="bg-gradient-to-r from-slate-100 to-zinc-300">
@@ -45,7 +48,8 @@ import Logo from "../components/Logo.astro";
                 <slot />
             </main>
             <footer class="rounded-b-lg px-3 py-5 bg-gradient-to-r from-cyan-500 to-blue-500 text-yellow-50">
-                <p class="text-center">(c) 2024 EmmaLinux.</p> 
+                <p class="text-center">(c) 2024 EmmaLinux.</p>
+                <p>Built with <a href="https://astro.build">{Astro.generator}</a></p>
             </footer>
         </div>
     </body>
