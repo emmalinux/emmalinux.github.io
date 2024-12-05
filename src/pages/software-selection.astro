@@ -1,0 +1,14 @@
+---
+import { marked } from 'marked';
+
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+const res = await fetch('https://raw.githubusercontent.com/emmalinux/software-selection/refs/heads/main/README.md');
+
+const markdown = await res.text();
+const content = marked.parse(markdown);
+---
+
+<DefaultLayout>
+    <article set:html={content} />
+</DefaultLayout>
